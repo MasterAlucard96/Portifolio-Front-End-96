@@ -1,0 +1,2618 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Conteúdo do meu Site">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<meta name="keywords" content="palavras,chaves">
+		<meta name="author" content="R.Santos">
+
+		<title>Playstation.com</title>
+		
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+
+			html,body{
+				min-width: 550px;
+				height: 100%;
+				font-family: 'Josefin Sans', sans-serif;
+			}
+
+			.clear-both{
+				clear: both;
+			}
+
+			/******----(SESSÃO TOP)----******/
+
+			.sessao-top{
+				position: fixed;
+				display: flex;
+				z-index: 1;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100px;
+				animation-name: color;
+				animation-duration: 12s;
+				animation-iteration-count: infinite;
+			}
+
+			.sessao-top-animation{
+				border: none;
+				border-bottom-right-radius: 7px;
+				border-bottom-left-radius: 7px;
+				position: static;
+				width: 100%;
+				height: 90px;
+				padding: 15px 30px 15px 115px;
+				transition: 1s;
+				background-color: #5f5c69;
+			}
+
+			.logotipo{
+				position: static;
+				float: left;
+				width: 250px;
+				height: 60px;
+				cursor: pointer;
+				text-align: center;
+				font-size: 50px;
+				transition: 1s;
+				animation-name: logotipo;
+				animation-duration: 12s;
+				animation-iteration-count: infinite;
+			}
+
+			.login{
+				position: fixed;
+				top: 10px;
+				left: calc(100% - 375px);
+				width: 365px;
+				height: 70px;
+				padding: 5px;
+				transition: 0.5s;
+			}
+
+			.gmail{position: static;
+				border: none;
+				border-radius: 5px;
+				float: left;
+				padding-bottom: 4px;
+				width: 68%;
+				height: 50%;
+				transition-delay: 0.5s;
+				transition: 0.5s;
+			}
+
+			.senha{
+				position: static;
+				border: none;
+				border-radius: 5px;
+				float: left;
+				padding-top: 4px;
+				width: 68%;
+				height: 50%;
+				transition-delay: 0.5s;
+				transition: 0.5s;
+			}
+
+			.enviar-top{
+				position: static;
+				border: none;
+				border-radius: 5px;
+				float: right;
+				margin-top: 4px;
+				width: 30%;
+				transition: 0.3s;
+				height: calc(50% - 4px);
+			}
+
+			.login input[type=email]{
+				border: none;
+				border-radius: 5px;
+				padding: 5px;
+				width: 100%;
+				height: 100%;
+			}
+
+			.login input[type=password]{
+				border: none;
+				border-radius: 5px;
+				padding: 5px;
+				width: 100%;
+				height: 100%;
+			}
+
+			.login input[type=submit]{
+				border: none;
+				border-radius: 5px;
+				width: 100%;
+				height: 100%;
+				cursor: pointer;
+			}
+
+			.enviar-top:hover{
+				animation-name: shadow;
+				animation-duration: 3s;
+				animation-iteration-count: infinite;
+			}
+
+			@keyframes shadow{
+				0%{
+					box-shadow: 0 0 7px 2px #940005;
+				}
+
+				25%{
+					box-shadow: 0 0 7px 2px #149900;
+				}
+
+				50%{
+					box-shadow: 0 0 7px 2px #6300c7;
+				}
+
+				75%{
+					box-shadow: 0 0 7px 2px #ad4410;
+				}
+
+				100%{
+					box-shadow: 0 0 7px 2px #940005;
+				}
+			}
+
+			@keyframes logotipo{
+				0%{
+					color: #118c78;
+				}
+
+				25%{
+					color: #149900;
+				}
+
+				50%{
+					color: #6300c7;
+				}
+
+				75%{
+					color: #ad4410;
+				}
+
+				100%{
+					color: #118c78;
+				}
+			}
+
+			/******----(SESSÃO LEFT)----******/
+
+			.sessao-left{
+				position: fixed;
+				display: flex;
+				z-index: 2;
+				top: 100px;
+				left: 0;
+				width: 240px;
+				height: 100%;
+				transition: 0.6s;
+				animation-name: color;
+				animation-duration: 12s;
+				animation-iteration-count: infinite;
+			}
+
+			.sessao-left-02{
+				border: none;
+				border-top-right-radius: 7px;
+				position: static;
+				width: 230px;
+				height: 100%;
+				transition: 0.6s;
+				padding: 10px 10px 0 10px;
+				background-color: #5f5c69;
+			}
+
+			.menu-left{
+				border: none;
+				border-radius: 5px;
+				position: static;
+				width: 190px;
+				height: 40px;
+				transition: 0.5s;
+				background-color: white;
+			}
+
+			.menu-left-02{
+				border: none;
+				border-radius: 5px;
+				position: static;
+				width: 190px;
+				height: 40px;
+				transition: 0.5s;
+				margin-top: 10px;
+				background-color: white;
+			}
+
+			.menu-left-03{
+				border: none;
+				border-radius: 5px;
+				position: static;
+				width: 190px;
+				height: 40px;
+				transition: 0.5s;
+				margin-top: 10px;
+				background-color: white;
+			}
+
+			.menu-left-04{
+				border: none;
+				border-radius: 5px;
+				position: static;
+				width: 190px;
+				height: 40px;
+				transition: 0.5s;
+				margin-top: 10px;
+				background-color: white;
+			}
+
+			.menu-left-05{
+				border: none;
+				border-radius: 5px;
+				position: static;
+				width: 190px;
+				height: 40px;
+				transition: 0.5s;
+				margin-top: 10px;
+				background-color: white;
+			}
+
+			.loja{
+				position: static;
+				width: 100%;
+				height: 100%;
+				cursor: pointer;
+				font-size: 25px;
+				text-align: center;
+				padding-top: 5px;
+				animation-name: logotipo;
+				animation-duration: 12s;
+				animation-iteration-count: infinite;
+			}
+
+			.games{
+				position: static;
+				width: 100%;
+				height: 100%;
+				cursor: pointer;
+				font-size: 25px;
+				text-align: center;
+				padding-top: 5px;
+				animation-name: logotipo;
+				animation-duration: 12s;
+				animation-iteration-count: infinite;
+			}
+
+			.livros{
+				position: static;
+				width: 100%;
+				height: 100%;
+				cursor: pointer;
+				font-size: 25px;
+				text-align: center;
+				padding-top: 5px;
+				animation-name: logotipo;
+				animation-duration: 12s;
+				animation-iteration-count: infinite;
+			}
+
+			.noticias{
+				position: static;
+				width: 100%;
+				height: 100%;
+				cursor: pointer;
+				font-size: 25px;
+				text-align: center;
+				padding-top: 5px;
+				animation-name: logotipo;
+				animation-duration: 12s;
+				animation-iteration-count: infinite;
+			}
+
+			.suporte{
+				position: static;
+				width: 100%;
+				height: 100%;
+				cursor: pointer;
+				font-size: 25px;
+				text-align: center;
+				padding-top: 5px;
+				animation-name: logotipo;
+				animation-duration: 12s;
+				animation-iteration-count: infinite;
+			}
+
+			.barramento{
+				position: fixed;
+				top: 110px;
+				left: 155px;
+				width: 0;
+				height: 250px;
+				opacity: 0;
+			}
+
+			.menu-quad{
+				position: fixed;
+				border: none;
+				border-top-left-radius: 2px;
+				border-bottom-left-radius: 2px;
+				top: 110px;
+				left: 240px;
+				width: 0;
+				height: 40px;
+				transition: 0.5s;
+				background-color: silver;
+			}
+
+			.menu-quad-02{
+				position: fixed;
+				border: none;
+				border-top-left-radius: 2px;
+				border-bottom-left-radius: 2px;
+				top: 160px;
+				left: 240px;
+				width: 0;
+				height: 40px;
+				transition: 0.5s;
+				background-color: silver;
+			}
+
+			.menu-quad-03{
+				position: fixed;
+				border: none;
+				border-top-left-radius: 2px;
+				border-bottom-left-radius: 2px;
+				top: 210px;
+				left: 240px;
+				width: 0;
+				height: 40px;
+				transition: 0.5s;
+				background-color: silver;
+			}
+
+			.menu-quad-04{
+				position: fixed;
+				border: none;
+				border-top-left-radius: 2px;
+				border-bottom-left-radius: 2px;
+				top: 260px;
+				left: 240px;
+				width: 0;
+				height: 40px;
+				transition: 0.5s;
+				background-color: silver;
+			}
+
+			.menu-quad-05{
+				position: fixed;
+				border: none;
+				border-top-left-radius: 2px;
+				border-bottom-left-radius: 2px;
+				top: 310px;
+				left: 240px;
+				width: 0;
+				height: 40px;
+				transition: 0.5s;
+				background-color: silver;
+			}
+
+			.menu-conte{
+				border: none;
+				border-top-right-radius: 15px;
+				border-bottom-right-radius: 15px;
+				position: fixed;
+				top: 110px;
+				left: 260px;
+				width: 0;
+				height: 240px;
+				transition: 0.5s;
+				transition-delay: 0.5s;
+				animation-name: color;
+				animation-duration: 12s;
+				animation-iteration-count: infinite;
+			}
+
+			.menu-conte-02{
+				border: none;
+				border-top-right-radius: 15px;
+				border-bottom-right-radius: 15px;
+				position: fixed;
+				top: 110px;
+				left: 260px;
+				width: 0;
+				height: 240px;
+				transition: 0.5s;
+				transition-delay: 0.5s;
+				animation-name: color;
+				animation-duration: 12s;
+				animation-iteration-count: infinite;
+			}
+
+			.menu-conte-03{
+				border: none;
+				border-top-right-radius: 15px;
+				border-bottom-right-radius: 15px;
+				position: fixed;
+				top: 110px;
+				left: 260px;
+				width: 0;
+				height: 240px;
+				transition: 0.5s;
+				transition-delay: 0.5s;
+				animation-name: color;
+				animation-duration: 12s;
+				animation-iteration-count: infinite;
+			}
+
+			.menu-conte-04{
+				border: none;
+				border-top-right-radius: 15px;
+				border-bottom-right-radius: 15px;
+				position: fixed;
+				top: 110px;
+				left: 260px;
+				width: 0;
+				height: 240px;
+				transition: 0.5s;
+				transition-delay: 0.5s;
+				animation-name: color;
+				animation-duration: 12s;
+				animation-iteration-count: infinite;
+			}
+
+			.menu-conte-05{
+				border: none;
+				border-top-right-radius: 15px;
+				border-bottom-right-radius: 15px;
+				position: fixed;
+				top: 110px;
+				left: 260px;
+				width: 0;
+				height: 240px;
+				transition: 0.5s;
+				transition-delay: 0.5s;
+				animation-name: color;
+				animation-duration: 12s;
+				animation-iteration-count: infinite;
+			}
+
+			.tab-left{
+				border: none;
+				float: left;
+				position: static;
+				width: calc(50% - 0.5%);
+				height: 100%;
+				transform: rotateY(90deg);
+				transition: 0.3s;
+				background-color: #5f5c69;
+			}
+
+			.barra-mid{
+				float: left;
+				position: static;
+				width: 1%;
+				height: 100%;
+				background-color: black;
+			}
+
+			.tab-right{
+				border: none;
+				border-top-left-radius: 10px;
+				border-bottom-left-radius: 10px;
+				float: left;
+				position: static;
+				width: calc(50% - 0.5%);
+				height: 100%;
+				transform: rotateY(90deg);
+				transition: 0.3s;
+				background-color: #5f5c69;
+			}
+
+			.texto-menu{
+				border: none;
+				border-radius: 5px;
+				position: static;
+				width: 100%;
+				height: 20%;
+				margin: 3.5% auto;
+				background-color: black;
+			}
+
+			.left-animation{
+				border: none;
+				border-bottom-right-radius: 2px;
+				border-bottom-left-radius: 2px;
+				position: fixed;
+				top: 90px;
+				left: 230px;
+				width: 10px;
+				height: 0;
+				transition: 0.5s;
+				background-color: black;
+			}
+
+			.menu-left:hover .left-animation{
+				height: 60px;
+			}
+
+			.menu-left-02:hover .left-animation{
+				height: 110px;
+			}
+
+			.menu-left-03:hover .left-animation{
+				height: 160px;
+			}
+
+			.menu-left-04:hover .left-animation{
+				height: 210px;
+			}
+
+			.menu-left-05:hover .left-animation{
+				height: 260px;
+			}
+
+			.menu-left:hover .menu-quad{
+				width: 20px;
+			}
+
+			.menu-left-02:hover .menu-quad-02{
+				width: 20px;
+			}
+
+			.menu-left-03:hover .menu-quad-03{
+				width: 20px;
+			}
+
+			.menu-left-04:hover .menu-quad-04{
+				width: 20px;
+			}
+
+			.menu-left-05:hover .menu-quad-05{
+				width: 20px;
+			}
+
+			.menu-left:hover .menu-conte{
+				width: 645px;
+				padding: 5px;
+			}
+
+			.menu-left-02:hover .menu-conte-02{
+				width: 645px;
+				padding: 5px;
+			}
+
+			.menu-left-03:hover .menu-conte-03{
+				width: 645px;
+				padding: 5px;
+			}
+
+			.menu-left-04:hover .menu-conte-04{
+				width: 645px;
+				padding: 5px;
+			}
+
+			.menu-left-05:hover .menu-conte-05{
+				width: 645px;
+				padding: 5px;
+			}
+
+			.menu-left:hover .tab-left{
+				transform: rotateY(180deg);
+				transition-delay: 0.7s;
+				padding: 3% 10%;
+			}
+
+			.menu-left-02:hover .tab-left{
+				transform: rotateY(180deg);
+				transition-delay: 0.7s;
+				padding: 3% 10%;
+			}
+
+			.menu-left-03:hover .tab-left{
+				transform: rotateY(180deg);
+				transition-delay: 0.7s;
+				padding: 3% 10%;
+			}
+
+			.menu-left-04:hover .tab-left{
+				transform: rotateY(180deg);
+				transition-delay: 0.7s;
+				padding: 3% 10%;
+			}
+
+			.menu-left-05:hover .tab-left{
+				transform: rotateY(180deg);
+				transition-delay: 0.7s;
+				padding: 3% 10%;
+			}
+
+			.menu-left:hover .tab-right{
+				transform: rotateY(180deg);
+				transition-delay: 0.7s;
+				padding: 3% 10%;
+			}
+
+			.menu-left-02:hover .tab-right{
+				transform: rotateY(180deg);
+				transition-delay: 0.7s;
+				padding: 3% 10%;
+			}
+
+			.menu-left-03:hover .tab-right{
+				transform: rotateY(180deg);
+				transition-delay: 0.7s;
+				padding: 3% 10%;
+			}
+
+			.menu-left-04:hover .tab-right{
+				transform: rotateY(180deg);
+				transition-delay: 0.7s;
+				padding: 3% 10%;
+			}
+
+			.menu-left-05:hover .tab-right{
+				transform: rotateY(180deg);
+				transition-delay: 0.7s;
+				padding: 3% 10%;
+			}
+
+			.menu-left:hover .barramento{
+				width: 105px;
+			}
+
+			.menu-left-02:hover .barramento{
+				width: 105px;
+			}
+
+			.menu-left-03:hover .barramento{
+				width: 105px;
+			}
+
+			.menu-left-04:hover .barramento{
+				width: 105px;
+			}
+
+			.menu-left-05:hover .barramento{
+				width: 105px;
+			}
+
+			.menu-left:hover{
+				width: 100%;
+			}
+
+			.menu-left-02:hover{
+				width: 100%;
+			}
+
+			.menu-left-03:hover{
+				width: 100%;
+			}
+
+			.menu-left-04:hover{
+				width: 100%;
+			}
+
+			.menu-left-05:hover{
+				width: 100%;
+			}
+
+			.bloco-redes{
+				position: static;
+				width: 100%;
+				border: none;
+				border-radius: 10px;
+				margin-top: calc(97% - 1px);
+			}
+
+			.instagram{
+				position: static;
+				transition: 0.7s;
+				border: none;
+				border-radius: 10px;
+				width: 100%;
+				height: 40px;
+				cursor: pointer;
+				padding-right: 30px;
+				background-color: black;
+				background-image: linear-gradient(90deg, black 20%, #520505, black);
+			}
+
+			.whatsapp{
+				position: static;
+				transition: 0.7s;
+				border: none;
+				border-radius: 10px;
+				margin-top: 10px;
+				width: 100%;
+				height: 40px;
+				cursor: pointer;
+				padding-right: 30px;
+				background-color: black;
+				background-image: linear-gradient(90deg, black 20%, #520505, black);
+			}
+
+			.img-insta{
+				float: left;
+				border: none;
+				border-radius: 10px;
+				width: 24%;
+				height: 40px;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				background-image: url(./Imagens/instagram.png);
+			}
+
+			.img-whats{
+				float: left;
+				border: none;
+				border-radius: 10px;
+				width: 24%;
+				height: 40px;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				background-image: url(./Imagens/whatsapp.png);
+			}
+
+			.redes{
+				position: static;
+				float: right;
+				font-size: 25px;
+				cursor: pointer;
+				margin: 5px 0;
+				color: silver;
+			}
+
+			.texto-roda{
+				position: static;
+			}
+
+			.instagram:hover{
+				box-shadow: 0 0 7px 5px #91a1ba;
+			}
+
+			.instagram:hover .left-animation-02{
+				top: calc(100% - 112px);
+			}
+
+			.whatsapp:hover{
+				box-shadow: 0 0 7px 5px #91a1ba;
+			}
+
+			.whatsapp:hover .left-animation-02{
+				top: calc(100% - 62px);
+			}
+
+			.left-animation-02{
+				display: flex;
+				z-index: 2;
+				border: none;
+				border-top-right-radius: 2px;
+				border-top-left-radius: 2px;
+				position: fixed;
+				top: 100%;
+				left: 230px;
+				width: 10px;
+				height: 300px;
+				transition: 0.5s;
+				background-color: black;
+			}
+
+			/******----(SESSÃO PRINCIPAL / SESSÃO RIGHT)----******/
+
+			.sessao-principal{
+				width: 100%;
+				padding: 100px 10px 0 0;
+				transition: 2s;
+				animation-name: color;
+				animation-duration: 12s;
+				animation-iteration-count: infinite;
+			}
+
+			.sessao-right{
+				border: none;
+				border-radius: 7px;
+				float: right;
+				width: calc(100% - 240px);
+				height: 460px;
+				padding: 20px;
+				opacity: 0.9;
+				transition: 2s;
+				background-image: url(./Imagens/tela-playstation.png);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+			}
+
+			.frase{
+				float: left;
+				width: 510px;
+				padding: 5px;
+				margin-top: 260px;
+				color: silver;
+			}
+
+			.frase .min-texto{
+				font-size: 29px;
+			}
+
+			.frase .playstation{
+				font-size: 39px;
+			}
+
+			.formulario{
+				float: right;
+				border: none;
+				border-radius: 10px;
+				width: 360px;
+				height: 420px;
+				padding: 0 10px;
+				transition: 1s;
+				background-color: #5f5c69;
+			}
+
+			.formulario h3{
+				width: 80%;
+				font-size: 20px;
+				text-align: left;
+				margin: 15px auto;
+				color: silver;
+			}
+
+			.dados{
+				border: none;
+				border-radius: 5px;
+				width: 80%;
+				height: 30px;
+				margin: 15px auto;
+				background-color: blueviolet;
+			}
+
+			.telefone{
+				border: none;
+				border-radius: 5px;
+				width: 80%;
+				height: 30px;
+				margin: 15px auto;
+				background-color: blueviolet;
+			}
+
+			.texto{
+				border: none;
+				border-radius: 5px;
+				width: 80%;
+				height: 100px;
+				margin: 15px auto;
+				background-color: blueviolet;
+			}
+
+			.enviar{
+				border: none;
+				border-radius: 5px;
+				width: 80%;
+				height: 40px;
+				transition: 0.3s;
+				margin: 40px auto 15px auto;
+			}
+
+			.dados input[type=email]{
+				width: 100%;
+				height: 100%;
+				border: none;
+				border-radius: 5px;
+				padding: 7px;
+			}
+
+			.dados input[type=password]{
+				width: 100%;
+				height: 100%;
+				border: none;
+				border-radius: 5px;
+				padding: 7px;
+			}
+
+			.telefone input[type=number]{
+				width: 100%;
+				height: 100%;
+				border: none;
+				border-radius: 5px;
+				padding: 7px;
+			}
+
+			.texto-form{
+				width: 100%;
+				height: 100%;
+				border: none;
+				border-radius: 5px;
+				padding: 7px;
+			}
+
+			.enviar input[type=submit]{
+				width: 100%;
+				height: 100%;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+				font-size: 25px;
+			}
+
+			.enviar:hover{
+				width: 70%;
+				animation-name: shadow-02;
+				animation-duration: 3s;
+				animation-iteration-count: infinite;
+			}
+
+			@keyframes shadow-02{
+				0%{
+					box-shadow: 0 0 7px 3px #940005;
+				}
+
+				25%{
+					box-shadow: 0 0 7px 3px #149900;
+				}
+
+				50%{
+					box-shadow: 0 0 7px 3px #6300c7;
+				}
+
+				75%{
+					box-shadow: 0 0 7px 3px #ad4410;
+				}
+
+				100%{
+					box-shadow: 0 0 7px 3px #940005;
+				}
+			}
+
+			/******----(SESSÃO CONTEÚDO)----******/
+
+			.sessao-conteudo{
+				border: none;
+				border-radius: 7px;
+				float: right;
+				width: calc(100% - 240px);
+				height: 550px;
+				padding: 20px;
+				margin-top: 10px;
+				transition: 2s;
+				background-image: url(./Imagens/play.jpg);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+			}
+
+			.logotipo-center{
+				position: relative;
+				border: none;
+				border-radius: 20px;
+				margin-top: -65px;
+				margin-left: calc(50% - 40px);
+				width: 80px;
+				height: 80px;
+				transition: 0.3s;
+				animation-name: color;
+				animation-duration: 12s;
+				animation-iteration-count: infinite;
+				background-image: url(./Imagens/logotipo-da-playstation.png);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 80%;
+			}
+
+			.bloco-left{
+				position: static;
+				float: left;
+				width: 400px;
+				height: 140px;
+				padding: 5px;
+				margin-left: 35px;
+			}
+
+			.texto-top-top{
+				position: static;
+				width: 100%;
+				height: 65px;
+				color: #b0a1a0;
+			}
+
+			.texto-cont{
+				animation-name: texto-conte;
+				animation-duration: 25s;
+				animation-iteration-count: infinite;
+			}
+
+			.texto-cont-02{
+				animation-name: texto-conte-02;
+				animation-duration: 25s;
+				animation-iteration-count: infinite;
+			}
+
+			.texto-cont-03{
+				animation-name: texto-conte-03;
+				animation-duration: 25s;
+				animation-iteration-count: infinite;
+			}
+
+			.texto-cont-playstation{
+				position: static;
+				padding-top: 5px;
+				font-size: 44px;
+				color: #b0a1a0;
+			}
+
+			@keyframes texto-conte{
+				0%{
+					font-size: 0;
+					opacity: 0;
+				}
+
+				20%{
+					font-size: 30px;
+					opacity: 1;
+				}
+
+				35%{
+					font-size: 0;
+					opacity: 0;
+				}
+
+				75%{
+					font-size: 0;
+					opacity: 0;
+				}
+
+				100%{
+					font-size: 0;
+					opacity: 0;
+				}
+			}
+
+			@keyframes texto-conte-02{
+				0%{
+					font-size: 0;
+					opacity: 0;
+				}
+
+				35%{
+					font-size: 0;
+					opacity: 0;
+				}
+
+				50%{
+					font-size: 30px;
+					opacity: 1;
+				}
+
+				65%{
+					font-size: 0;
+					opacity: 0;
+				}
+
+				100%{
+					font-size: 0;
+					opacity: 0;
+				}
+			}
+
+			@keyframes texto-conte-03{
+				0%{
+					font-size: 0;
+					opacity: 0;
+				}
+
+				25%{
+					font-size: 0;
+					opacity: 0;
+				}
+
+				65%{
+					font-size: 0;
+					opacity: 0;
+				}
+
+				80%{
+					font-size: 30px;
+					opacity: 1;
+				}
+
+				95%{
+					font-size: 0;
+					opacity: 0;
+				}
+
+				100%{
+					font-size: 0;
+					opacity: 0;
+				}
+			}
+
+			.bloco-principal{
+				display: inline-block;
+				border: none;
+				border-radius: 15px;
+				width: 100%;
+				height: 320px;
+				padding: 20px 30px;
+				margin-top: 20px;
+				transition: 2s;
+			}
+
+			.bloco{
+				float: left;
+				border: none;
+				border-radius: 10px;
+				width: 18%;
+				height: 100%;
+				margin-left: 5px;
+				transition: 0.2s;
+			}
+
+			.bloco:hover{
+				box-shadow: 0 0 5px 4px #1a68a3;
+			}
+
+			.bloco-02{
+				float: left;
+				border: none;
+				border-radius: 10px;
+				width: 18%;
+				height: 100%;
+				margin-left: 20px;
+				transition: 0.2s;
+			}
+
+			.bloco-02:hover{
+				box-shadow: 0 0 5px 4px #1a68a3;
+			}
+
+			.bloco-03{
+				float: left;
+				border: none;
+				border-radius: 10px;
+				width: 18%;
+				height: 100%;
+				margin-left: 20px;
+				transition: 0.2s;
+			}
+
+			.bloco-03:hover{
+				box-shadow: 0 0 5px 4px #1a68a3;
+			}
+
+			.bloco-04{
+				float: left;
+				border: none;
+				border-radius: 10px;
+				width: 18%;
+				height: 100%;
+				margin-left: 20px;
+				transition: 0.2s;
+			}
+
+			.bloco-04:hover{
+				box-shadow: 0 0 5px 4px #1a68a3;
+			}
+
+			.bloco-05{
+				float: left;
+				border: none;
+				border-radius: 10px;
+				width: 18%;
+				height: 100%;
+				margin-left: 20px;
+				transition: 0.2s;
+			}
+
+			.bloco-05:hover{
+				box-shadow: 0 0 5px 4px #1a68a3;
+			}
+
+			.bloco-06{
+				display: none;
+				float: left;
+				border: none;
+				border-radius: 10px;
+				width: 18%;
+				height: 100%;
+				margin-left: 20px;
+			}
+
+			.bloco-06:hover{
+				box-shadow: 0 0 5px 4px #1a68a3;
+				transition: 0.2s;
+			}
+
+			.bloco-top{
+				border: none;
+				border-top-left-radius: 10px;
+				border-top-right-radius: 10px;
+				width: 100%;
+				height: 70%;
+			}
+
+			.bloco .bloco-top{
+				background-image: url(./Imagens/spiderman.jpg);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+			}
+
+			.bloco-02 .bloco-top{
+				background-image: url(./Imagens/godofwar.jpg);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+			}
+
+			.bloco-03 .bloco-top{
+				background-image: url(./Imagens/thelastofus2.png);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+			}
+
+			.bloco-04 .bloco-top{
+				background-image: url(./Imagens/granturismo.jpg);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+			}
+
+			.bloco-05 .bloco-top{
+				background-image: url(./Imagens/uncharted.png);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+			}
+
+			.bloco-06 .bloco-top{
+				background-image: url(./Imagens/deathstranding.jpg);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+			}
+
+			.bloco-texto{
+				border: none;
+				border-bottom-left-radius: 10px;
+				border-bottom-right-radius: 10px;
+				text-align: center;
+				padding-top: 15px;
+				font-size: 22px;
+				color: silver;
+				width: 100%;
+				height: 30%;
+				background-color: #5f5c69;
+			}
+
+			.logotipo-center:hover{
+				border-radius: 40px;
+				background-size: 60%;
+			}
+
+			/******----(SESSÃO APRESENTAÇÃO)----******/
+
+			.sessao-apresentacao{
+				border: none;
+				border-radius: 7px;
+				float: right;
+				width: calc(100% - 240px);
+				height: 600px;
+				padding: 20px;
+				margin-top: 10px;
+				opacity: 0.9;
+				transition: 2s;
+				background-image: url(./Imagens/kratos.png);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+			}
+
+			.frase-02{
+				float: left;
+				transition: 1s;
+				width: 510px;
+				padding: 5px;
+				margin-top: 150px;
+			}
+
+			.frase-02 .min-texto-02{
+				font-size: 31px;
+				width: 450px;
+				color: #b0a1a0;
+			}
+
+			.frase-02 .min-texto-03{
+				font-size: 18px;
+				font-style: italic;
+				font-weight: bold;
+				margin-top: 10px;
+				color: #b0a1a0;
+			}
+
+			.frase-02 input[type=submit]{
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+				width: 130px;
+				height: 30px;
+				font-weight: bold;
+				margin-top: 10px;
+				transition: 0.3s;
+			}
+
+			.frase-02 input[type=submit]:hover{
+				animation-name: shadow-03;
+				animation-duration: 3s;
+				animation-iteration-count: infinite;
+			}
+
+			@keyframes shadow-03{
+				0%{
+					box-shadow: 0 0 7px 3px #940005;
+				}
+
+				25%{
+					box-shadow: 0 0 7px 3px #149900;
+				}
+
+				50%{
+					box-shadow: 0 0 7px 3px #6300c7;
+				}
+
+				75%{
+					box-shadow: 0 0 7px 3px #ad4410;
+				}
+
+				100%{
+					box-shadow: 0 0 7px 3px #940005;
+				}
+			}
+
+			/******----(SESSÃO RODA)----******/
+
+			.sessao-roda{
+				border: none;
+				border-top-right-radius: 7px;
+				border-top-left-radius: 7px;
+				float: right;
+				width: calc(100% - 240px);
+				height: 140px;
+				padding: 28px;
+				margin-top: 10px;
+				transition: 2s;
+				background-color: #5f5c69;
+			}
+
+			.bloco-inform{
+				width: 100%;
+				height: 100%;
+				border: none;
+				border-radius: 10px;
+			}
+
+			.bloco-roda{
+				position: static;
+				width: 460px;
+				height: 100%;
+				margin: 0 auto;
+				padding: 20px;
+				font-size: 20px;
+				font-weight: bold;
+				font-family: 'Ubuntu Mono', monospace;
+				color: silver;
+			}
+
+			.frase-roda{
+				cursor: pointer;
+			}
+
+			.name{
+				cursor: pointer;
+				width: 20%;
+				margin: 0 auto;
+				font-weight: bold;
+			}
+
+			.bloco-redes-02{
+				display: none;
+				width: 100%;
+				height: 40px;
+				border: none;
+				border-radius: 10px;
+			}
+
+			.instagram-02{
+				float: left;
+				transition: 0.7s;
+				border: none;
+				border-radius: 10px;
+				width: 170px;
+				height: 40px;
+				cursor: pointer;
+				padding-right: 20px;
+				background-image: linear-gradient(90deg, black 20%, #520505, black);
+			}
+
+			.whatsapp-02{
+				float: left;
+				transition: 0.7s;
+				border: none;
+				border-radius: 10px;
+				width: 170px;
+				height: 40px;
+				margin-left: 1%;
+				cursor: pointer;
+				padding-right: 20px;
+				background-image: linear-gradient(90deg, black 20%, #520505, black);
+			}
+
+			.youtube{
+				float: left;
+				transition: 0.7s;
+				border: none;
+				border-radius: 10px;
+				width: 170px;
+				height: 40px;
+				margin-left: 1%;
+				cursor: pointer;
+				padding-right: 30px;
+				background-image: linear-gradient(90deg, black 20%, #520505, black);
+			}
+
+			.img-insta-02{
+				position: static;
+				float: left;
+				border: none;
+				border-radius: 10px;
+				width: calc(24% + 6px);
+				height: 40px;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				background-image: url(./Imagens/instagram.png);
+			}
+
+			.img-whats-02{
+				position: static;
+				float: left;
+				border: none;
+				border-radius: 10px;
+				width: calc(24% + 6px);
+				height: 40px;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				background-image: url(./Imagens/whatsapp.png);
+			}
+
+			.img-youtube{
+				position: static;
+				float: left;
+				border: none;
+				border-radius: 10px;
+				width: calc(24% + 7px);
+				height: 40px;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				background-image: url(./Imagens/youtube.png);
+			}
+
+			.redes-02{
+				position: static;
+				float: right;
+				font-size: 20px;
+				cursor: pointer;
+				margin: 8px 0;
+				color: silver;
+			}
+
+			.texto-roda-02{
+				position: static;
+			}
+
+			.instagram-02:hover{
+				box-shadow: 0 0 7px 5px #91a1ba;
+			}
+
+			.whatsapp-02:hover{
+				box-shadow: 0 0 7px 5px #91a1ba;
+			}
+
+			.youtube:hover{
+				box-shadow: 0 0 7px 5px #91a1ba;
+			}
+
+			/******----(ANIMAÇÃO / RESPONSIVO)----******/
+
+			@keyframes color{
+				0%{
+					background-color: #118c78;
+				}
+
+				25%{
+					background-color: #149900;
+				}
+
+				50%{
+					background-color: #6300c7;
+				}
+
+				75%{
+					background-color: #ad4410;
+				}
+
+				100%{
+					background-color: #118c78;
+				}
+			}
+
+			@media screen and (max-width: 1260px){
+				.menu-quad{
+					transition: 0s;
+				}
+
+				.menu-quad-02{
+					transition: 0s;
+				}
+
+				.menu-quad-03{
+					transition: 0s;
+				}
+
+				.menu-quad-04{
+					transition: 0s;
+				}
+
+				.menu-quad-05{
+					transition: 0s;
+				}
+
+				.menu-conte{
+					transition: 0s;
+				}
+
+				.menu-conte-02{
+					transition: 0s;
+				}
+
+				.menu-conte-03{
+					transition: 0s;
+				}
+
+				.menu-conte-04{
+					transition: 0s;
+				}
+
+				.menu-conte-05{
+					transition: 0s;
+				}
+
+				.left-animation{
+					transition: 0s;
+				}
+			}
+
+			@media screen and (max-width: 1250px){
+				.sessao-top-animation{
+					padding: 15px 0;
+				}
+
+				.logotipo{
+					margin-left: calc(50% - 125px);
+				}
+
+				.login{
+					border: none;
+					border-radius: 7px;
+					top: 10px;
+					left: calc(100% - 80px);
+					width: 70px;
+					height: 70px;
+					background-size: cover;
+					background-position: center;
+					background-repeat: no-repeat;
+					background-image: url(./Imagens/login.png);
+				}
+
+				.login div{
+					opacity: 0;
+				}
+
+				.login:hover{
+					width: 365px;
+					left: calc(100% - 375px);
+					background-image: none;
+					background-color: #5f5c80;
+				}
+
+				.login:hover div{
+					opacity: 1;
+				}
+
+				.sessao-left{
+					width: 100%;
+					height: 70px;
+				}
+
+				.sessao-left-02{
+					border-radius: 7px;
+					width: 100%;
+					height: calc(100% - 10px);
+				}
+
+				.menu-left{
+					float: left;
+					width: 15%;
+					margin-left: 2.5%;
+				}
+
+				.menu-left-02{
+					float: left;
+					width: 15%;
+					margin-top: 0;
+					margin-left: 5%;
+				}
+
+				.menu-left-03{
+					float: left;
+					width: 15%;
+					margin: 0;
+					margin-left: 5%;
+				}
+
+				.menu-left-04{
+					float: left;
+					width: 15%;
+					margin: 0;
+					margin-left: 5%;
+				}
+
+				.menu-left-05{
+					float: left;
+					width: 15%;
+					margin: 0;
+					margin-left: 5%;
+				}
+
+				.barramento{
+					top: 150px;
+					left: 4%;
+					width: 0;
+					height: 0;
+				}
+
+				.menu-left:hover .barramento{
+					width: 92%;
+					height: 30px;
+				}
+
+				.menu-left-02:hover .barramento{
+					width: 92%;
+					height: 30px;
+				}
+
+				.menu-left-03:hover .barramento{
+					width: 92%;
+					height: 30px;
+				}
+
+				.menu-left-04:hover .barramento{
+					width: 92%;
+					height: 30px;
+				}
+
+				.menu-left-05:hover .barramento{
+					width: 92%;
+					height: 30px;
+				}
+
+				.loja{
+					font-size: 20px;
+					padding-top: 10px;
+				}
+
+				.games{
+					font-size: 20px;
+					padding-top: 10px;
+				}
+
+				.livros{
+					font-size: 20px;
+					padding-top: 10px;
+				}
+
+				.noticias{
+					font-size: 20px;
+					padding-top: 10px;
+				}
+
+				.suporte{
+					font-size: 20px;
+					padding-top: 10px;
+				}
+
+				.menu-quad{
+					border-top-right-radius: 2px;
+					border-bottom-left-radius: 0;
+					position: relative;
+					top: 0;
+					left: 0;
+					margin-top: 10px;
+					margin-left: calc(50% - 20px);
+					width: 40px;
+					height: 0;
+					background-color: black;
+				}
+
+				.menu-quad-02{
+					border-top-right-radius: 2px;
+					border-bottom-left-radius: 0;
+					position: relative;
+					top: 0;
+					left: 0;
+					margin-top: 10px;
+					margin-left: calc(50% - 20px);
+					width: 40px;
+					height: 0;
+					background-color: black;
+				}
+
+				.menu-quad-03{
+					border-top-right-radius: 2px;
+					border-bottom-left-radius: 0;
+					position: relative;
+					top: 0;
+					left: 0;
+					margin-top: 10px;
+					margin-left: calc(50% - 20px);
+					width: 40px;
+					height: 0;
+					background-color: black;
+				}
+
+				.menu-quad-04{
+					border-top-right-radius: 2px;
+					border-bottom-left-radius: 0;
+					position: relative;
+					top: 0;
+					left: 0;
+					margin-top: 10px;
+					margin-left: calc(50% - 20px);
+					width: 40px;
+					height: 0;
+					background-color: black;
+				}
+
+				.menu-quad-05{
+					border-top-right-radius: 2px;
+					border-bottom-left-radius: 0;
+					position: relative;
+					top: 0;
+					left: 0;
+					margin-top: 10px;
+					margin-left: calc(50% - 20px);
+					width: 40px;
+					height: 0;
+					background-color: black;
+				}
+
+				.menu-conte{
+					border-top-right-radius: 0;
+					border-top-left-radius: 0;
+					border-bottom-right-radius: 15px;
+					border-bottom-left-radius: 15px;
+					top: 170px;
+					left: 4%;
+					width: 92%;
+					height: 0;
+				}
+
+				.menu-conte-02{
+					border-top-right-radius: 0;
+					border-top-left-radius: 0;
+					border-bottom-right-radius: 15px;
+					border-bottom-left-radius: 15px;
+					top: 170px;
+					left: 4%;
+					width: 92%;
+					height: 0;
+				}
+
+				.menu-conte-03{
+					border-top-right-radius: 0;
+					border-top-left-radius: 0;
+					border-bottom-right-radius: 15px;
+					border-bottom-left-radius: 15px;
+					top: 170px;
+					left: 4%;
+					width: 92%;
+					height: 0;
+				}
+
+				.menu-conte-04{
+					border-top-right-radius: 0;
+					border-top-left-radius: 0;
+					border-bottom-right-radius: 15px;
+					border-bottom-left-radius: 15px;
+					top: 170px;
+					left: 4%;
+					width: 92%;
+					height: 0;
+				}
+
+				.menu-conte-05{
+					border-top-right-radius: 0;
+					border-top-left-radius: 0;
+					border-bottom-right-radius: 15px;
+					border-bottom-left-radius: 15px;
+					top: 170px;
+					left: 4%;
+					width: 92%;
+					height: 0;
+				}
+
+				.tab-left{
+					transition: 0.3s;
+					border-top-left-radius: 10px;
+					transform: rotateY(0deg);
+					transform: rotateX(90deg);
+				}
+
+				.tab-right{
+					transition: 0.3s;
+					border-top-left-radius: 0;
+					border-top-right-radius: 10px;
+					border-bottom-left-radius: 0;
+					transform: rotateY(0deg);
+					transform: rotateX(90deg);
+				}
+
+				.left-animation{
+					border-bottom-left-radius: 0;
+					border-top-right-radius: 2px;
+					left: 0;
+					width: 0;
+					height: 10px;
+					background-color: black;
+				}
+
+				.menu-left:hover .left-animation{
+					width: 100%;
+					height: 10px;
+				}
+
+				.menu-left-02:hover .left-animation{
+					width: 100%;
+					height: 10px;
+				}
+
+				.menu-left-03:hover .left-animation{
+					width: 100%;
+					height: 10px;
+				}
+
+				.menu-left-04:hover .left-animation{
+					width: 100%;
+					height: 10px;
+				}
+
+				.menu-left-05:hover .left-animation{
+					width: 100%;
+					height: 10px;
+				}
+
+				.menu-left:hover .tab-left{
+					transform: rotateY(0deg);
+					transform: rotateX(180deg);
+				}
+
+				.menu-left-02:hover .tab-left{
+					transform: rotateY(0deg);
+					transform: rotateX(180deg);
+				}
+
+				.menu-left-03:hover .tab-left{
+					transform: rotateY(0deg);
+					transform: rotateX(180deg);
+				}
+
+				.menu-left-04:hover .tab-left{
+					transform: rotateY(0deg);
+					transform: rotateX(180deg);
+				}
+
+				.menu-left-05:hover .tab-left{
+					transform: rotateY(0deg);
+					transform: rotateX(180deg);
+				}
+
+				.menu-left:hover .tab-right{
+					transform: rotateY(0deg);
+					transform: rotateX(180deg);
+				}
+
+				.menu-left-02:hover .tab-right{
+					transform: rotateY(0deg);
+					transform: rotateX(180deg);
+				}
+
+				.menu-left-03:hover .tab-right{
+					transform: rotateY(0deg);
+					transform: rotateX(180deg);
+				}
+
+				.menu-left-04:hover .tab-right{
+					transform: rotateY(0deg);
+					transform: rotateX(180deg);
+				}
+
+				.menu-left-05:hover .tab-right{
+					transform: rotateY(0deg);
+					transform: rotateX(180deg);
+				}
+
+				.menu-left:hover{
+					width: 15%;
+				}
+
+				.menu-left-02:hover{
+					width: 15%;
+				}
+
+				.menu-left-03:hover{
+					width: 15%;
+				}
+
+				.menu-left-04:hover{
+					width: 15%;
+				}
+
+				.menu-left-05:hover{
+					width: 15%;
+				}
+
+				.menu-left:hover .menu-quad{
+					width: 40px;
+					height: 10px;
+				}
+
+				.menu-left-02:hover .menu-quad-02{
+					width: 40px;
+					height: 10px;
+				}
+
+				.menu-left-03:hover .menu-quad-03{
+					width: 40px;
+					height: 10px;
+				}
+
+				.menu-left-04:hover .menu-quad-04{
+					width: 40px;
+					height: 10px;
+				}
+
+				.menu-left-05:hover .menu-quad-05{
+					width: 40px;
+					height: 10px;
+				}
+
+				.menu-left:hover .menu-conte{
+					width: 92%;
+					height: 280px;
+					padding: 0 5px 5px 5px;
+				}
+
+				.menu-left-02:hover .menu-conte-02{
+					width: 92%;
+					height: 280px;
+					padding: 0 5px 5px 5px;
+				}
+
+				.menu-left-03:hover .menu-conte-03{
+					width: 92%;
+					height: 280px;
+					padding: 0 5px 5px 5px;
+				}
+
+				.menu-left-04:hover .menu-conte-04{
+					width: 92%;
+					height: 280px;
+					padding: 0 5px 5px 5px;
+				}
+
+				.menu-left-05:hover .menu-conte-05{
+					width: 92%;
+					height: 280px;
+					padding: 0 5px 5px 5px;
+				}
+
+				.bloco-redes{
+					display: none;
+				}
+
+				.sessao-principal{
+					padding: 170px 10px 0 10px;
+				}
+
+				.sessao-right{
+					width: 100%;
+					height: 520px;
+					padding: 40px;
+				}
+
+				.frase{
+					float: none;
+					display: none;
+				}
+
+				.sessao-conteudo{
+					width: 100%;
+				}
+
+				.sessao-apresentacao{
+					width: 100%;
+				}
+
+				.sessao-roda{
+					width: 100%;
+				}
+
+				.bloco-inform{
+					display: none;
+				}
+
+				.bloco-redes-02{
+					display: block;
+					width: 522px;
+					height: 100%;
+					margin-left: calc(50% - 261px);
+				}
+
+				.bloco-roda-02{
+					position: static;
+					display: inline-block;
+					width: 330px;
+					color: silver;
+					margin-top: 5px;
+					margin-left: calc(50% - 165px);
+				}
+
+				.frase-roda-02{
+					cursor: pointer;
+				}
+
+				.name-02{
+					width: 80px;
+					cursor: pointer;
+					margin-left: calc(50% - 40px);
+				}
+			}
+
+			@media screen and (max-width: 1240px){
+				.menu-quad{
+					transition: 0.5s;
+				}
+
+				.menu-quad-02{
+					transition: 0.5s;
+				}
+
+				.menu-quad-03{
+					transition: 0.5s;
+				}
+
+				.menu-quad-04{
+					transition: 0.5s;
+				}
+
+				.menu-quad-05{
+					transition: 0.5s;
+				}
+
+				.menu-conte{
+					transition: 0.5s;
+				}
+
+				.menu-conte-02{
+					transition: 0.5s;
+				}
+
+				.menu-conte-03{
+					transition: 0.5s;
+				}
+
+				.menu-conte-04{
+					transition: 0.5s;
+				}
+
+				.menu-conte-05{
+					transition: 0.5s;
+				}
+
+				.left-animation{
+					transition: 0.5s;
+				}
+			}
+
+			@media screen and (max-width: 1020px){
+				.formulario{
+					padding-top: 5px;
+					margin-right: calc(50% - 180px);
+				}
+
+				.bloco-left{
+					text-align: center;
+					margin-left: calc(50% - 200px);
+				}
+
+				.texto-top-top{
+					color: white;
+				}
+
+				.texto-cont-playstation{
+					color: white;
+				}
+
+				.bloco-texto{
+					padding: 20px;
+				}
+
+				.sessao-conteudo{
+					height: 900px;
+					padding-bottom: 0;
+				}
+
+				.bloco-principal{
+					height: 78%;
+					padding: 1.25% 5% 0 5%;
+				}
+
+				.bloco{
+					width: 30%;
+					height: 45%;
+					margin-left: 2.5%;
+					margin-top: 2.5%;
+				}
+
+				.bloco-02{
+					width: 30%;
+					height: 45%;
+					margin-left: 2.5%;
+					margin-top: 2.5%;
+				}
+
+				.bloco-03{
+					width: 30%;
+					height: 45%;
+					margin-left: 2.5%;
+					margin-top: 2.5%;
+				}
+
+				.bloco-04{
+					width: 30%;
+					height: 45%;
+					margin-left: 2.5%;
+					margin-top: 2.5%;
+				}
+
+				.bloco-05{
+					width: 30%;
+					height: 45%;
+					margin-left: 2.5%;
+					margin-top: 2.5%;
+				}
+
+				.bloco-06{
+					display: block;
+					width: 30%;
+					height: 45%;
+					margin-left: 2.5%;
+					margin-top: 2.5%;
+				}
+
+				.frase-02{
+					margin-top: 100px;
+					margin-left: calc(50% - 255px);
+					text-align: center;
+					background-color: #5f5c80;
+					border: none;
+					border-radius: 7px;
+				}
+
+				.frase-02 .min-texto-02{
+					width: 100%;
+				}
+
+				.frase-02:hover{
+					box-shadow: 0 0 5px 5px #91a1ba;
+				}
+			}
+
+			@media screen and (max-width: 800px){
+				.bloco{
+					width: 47.5%;
+				}
+
+				.bloco-02{
+					width: 47.5%;
+				}
+
+				.bloco-03{
+					width: 47.5%;
+				}
+
+				.bloco-04{
+					width: 47.5%;
+				}
+
+				.bloco-05{
+					display: none;
+				}
+
+				.bloco-06{
+					display: none;
+				}
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="sessao-top">
+			<div class="sessao-top-animation">
+				<div class="logotipo">
+					Playstation
+				</div><!--(LOGOTIPO)-->
+
+				<form class="login">
+					<div class="gmail">
+						<input placeholder="Email" type="email">
+					</div><!--(GMAIL)-->
+
+					<div class="senha">
+						<input placeholder="Senha" type="password">
+					</div><!--(SENHA)-->
+
+					<div class="enviar-top">
+						<input type="submit" name="acao" value="ENVIAR">
+					</div><!--(ENVIAR-TOP)-->
+
+					<div class="clear-both"></div><!--(CLEAR-BOTH)-->
+				</form><!--(LOGIN)-->
+
+				<div class="clear-both"></div><!--(CLEAR-BOTH)-->
+			</div><!--(TOP-ANIMATION)-->
+		</div><!--(SESSAO-TOP)-->
+
+		<div class="sessao-left">
+			<div class="sessao-left-02">
+				<div class="menu-left">
+					<p class="loja">Loja</p><!--(LOJA)-->
+					<div class="menu-quad"></div><!--(MENU-QUADRADO)-->
+					<div class="menu-conte">
+						<div class="tab-left">
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+						</div><!--(TABELA-LEFT)-->
+
+						<div class="barra-mid"></div><!--(BARRA-MEIO)-->
+
+						<div class="tab-right">
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+						</div><!--(TABELA-RIGHT)-->
+
+						<div class="barramento"></div><!--(BARRAMENTO)-->
+						<div class="clear-both"></div><!--(CLEAR-BOTH)-->
+					</div><!--(MENU-CONTEUDO)-->
+
+					<div class="left-animation"></div><!--(LEFT-ANIMATION)-->
+				</div><!--(MENU-LEFT)-->
+
+				<div class="menu-left-02">
+					<p class="games">Games</p><!--(GAMES)-->
+					<div class="menu-quad-02"></div><!--(MENU-QUADRADO-02)-->
+					<div class="menu-conte-02">
+						<div class="tab-left">
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+						</div><!--(TABELA-LEFT)-->
+
+						<div class="barra-mid"></div><!--(BARRA-MEIO)-->
+
+						<div class="tab-right">
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+						</div><!--(TABELA-RIGHT)-->
+
+						<div class="barramento"></div><!--(BARRAMENTO)-->
+						<div class="clear-both"></div><!--(CLEAR-BOTH)-->
+					</div><!--(MENU-CONTEUDO-02)-->
+
+					<div class="left-animation"></div><!--(LEFT-ANIMATION)-->
+				</div><!--(MENU-LEFT-02)-->
+
+				<div class="menu-left-03">
+					<p class="livros">Livros</p><!--(LIVROS)-->
+					<div class="menu-quad-03"></div><!--(MENU-QUADRADO-03)-->
+					<div class="menu-conte-03">
+						<div class="tab-left">
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+						</div><!--(TABELA-LEFT)-->
+
+						<div class="barra-mid"></div><!--(BARRA-MEIO)-->
+
+						<div class="tab-right">
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+						</div><!--(TABELA-RIGHT)-->
+
+						<div class="barramento"></div><!--(BARRAMENTO)-->
+						<div class="clear-both"></div><!--(CLEAR-BOTH)-->
+					</div><!--(MENU-CONTEUDO-03)-->
+
+					<div class="left-animation"></div><!--(LEFT-ANIMATION)-->
+				</div><!--(MENU-LEFT-03)-->
+
+				<div class="menu-left-04">
+					<p class="noticias">Notícias</p><!--(NOTICIAS)-->
+					<div class="menu-quad-04"></div><!--(MENU-QUADRADO-04)-->
+					<div class="menu-conte-04">
+						<div class="tab-left">
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+						</div><!--(TABELA-LEFT)-->
+						<div class="barra-mid"></div><!--(BARRA-MEIO)-->
+
+						<div class="tab-right">
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+						</div><!--(TABELA-RIGHT)-->
+
+						<div class="barramento"></div><!--(BARRAMENTO)-->
+						<div class="clear-both"></div><!--(CLEAR-BOTH)-->
+					</div><!--(MENU-CONTEUDO-04)-->
+
+					<div class="left-animation"></div><!--(LEFT-ANIMATION)-->
+				</div><!--(MENU-LEFT-04)-->
+
+				<div class="menu-left-05">
+					<p class="suporte">Suporte</p><!--(SUPORTE)-->
+					<div class="menu-quad-05"></div><!--(MENU-QUADRADO-05)-->
+					<div class="menu-conte-05">
+						<div class="tab-left">
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+						</div><!--(TABELA-LEFT)-->
+
+						<div class="barra-mid"></div><!--(BARRA-MEIO)-->
+
+						<div class="tab-right">
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+							<div class="texto-menu"></div><!--(TEXTO-MENU)-->
+						</div><!--(TABELA-RIGHT)-->
+
+						<div class="barramento"></div><!--(BARRAMENTO)-->
+						<div class="clear-both"></div><!--(CLEAR-BOTH)-->
+					</div><!--(MENU-CONTEUDO-05)-->
+
+					<div class="left-animation"></div><!--(LEFT-ANIMATION)-->
+				</div><!--(MENU-LEFT-05)-->
+
+				<div class="bloco-redes">
+					<div class="instagram">
+						<div class="img-insta"></div><!--(I.M.G-INSTA)-->
+						<div class="texto-roda">
+							<h3 class="redes">
+								Instagram
+							</h3><!--(REDES)-->
+
+							<div class="clear-both"></div><!--(CLEAR-BOTH)-->
+						</div><!--(TEXTO-RODA)-->
+
+						<div class="left-animation-02"></div><!--(LEFT-ANIMATION-02)-->
+						<div class="clear-both"></div><!--(CLEAR-BOTH)-->
+					</div><!--(INSTAGRAM)-->
+
+					<div class="whatsapp">
+						<div class="img-whats"></div><!--(I.M.G-WHATS)-->
+						<div class="texto-roda">
+							<h3 class="redes">
+								Whatsapp
+							</h3><!--(REDES)-->
+
+							<div class="clear-both"></div><!--(CLEAR-BOTH)-->
+						</div><!--(TEXTO-RODA)-->
+
+						<div class="left-animation-02"></div><!--(LEFT-ANIMATION-02)-->
+						<div class="clear-both"></div><!--(CLEAR-BOTH)-->
+					</div><!--(WHATSAPP)-->
+				</div><!--(BLOCO-REDES)-->
+			</div><!--(SESSAO-LEFT-02)-->	
+		</div><!--(SESSAO-LEFT)-->
+
+
+		<div class="sessao-principal">
+			<div class="sessao-right">
+				<div class="frase">
+					<p class="min-texto">Seja muito bem vindo, aqui você encontrará os games mais incríveis já produzidos pela</p>
+					<p class="playstation">Playstation Studios.</p>
+				</div><!--(FRASE)-->
+
+				<form class="formulario">
+					<h3 class="titulo">Preencha os dados<br>abaixo para nos contatar.</h3>
+
+					<div class="dados">
+						<input placeholder="Email" type="email">
+					</div><!--(DADOS)-->
+
+					<div class="dados">
+						<input placeholder="Nome completo" type="password">
+					</div><!--(DADOS)-->
+
+					<div class="telefone">
+						<input placeholder="Digite seu número de telefone" type="number">
+					</div><!--(TELEFONE)-->
+
+					<div class="texto">
+						<textarea class="texto-form">
+						</textarea><!--(TEXTO-FORM)-->
+					</div><!--(TEXTO)-->
+
+					<div class="enviar">
+						<input type="submit" name="acao" value="ENVIAR">
+					</div><!--(ENVIAR)-->
+
+					<div class="clear-both"></div><!--(CLEAR-BOTH)-->
+				</form><!--(FORMULARIO)-->
+			</div><!--(RIGTH)-->
+
+			<div class="sessao-conteudo">
+				<div class="logotipo-center"></div><!--(LOGOTIPO-CENTER)-->
+				<div class="bloco-left">
+					<div class="texto-top-top">
+						<p class="texto-cont">Os Melhores games<br>estão na</p>
+						<p class="texto-cont texto-cont-02">Você encontrará a<br>melhor experiência na</p>
+						<p class="texto-cont texto-cont-03">As melhores promoções<br>estão na</p>
+					</div>
+					<p class="texto-cont-playstation">Playstation Studios</p>
+				</div><!--(BLOCO-LEFT)-->
+				<div class="bloco-principal">
+					<div class="bloco">
+						<div class="bloco-top"></div>
+						<div class="bloco-texto">Marvel's<br>Spider Man</div>
+					</div><!--(BLOCO)-->
+					<div class="bloco-02">
+						<div class="bloco-top"></div>
+						<div class="bloco-texto">God Of War<br>(2018)</div>
+					</div><!--(BLOCO-02)-->
+					<div class="bloco-03">
+						<div class="bloco-top"></div>
+						<div class="bloco-texto">The Last Of Us<br>Parte II</div>
+					</div><!--(BLOCO-03)-->
+					<div class="bloco-04">
+						<div class="bloco-top"></div>
+						<div class="bloco-texto">Gran Turismo<br>Sport</div>
+					</div><!--(BLOCO-04)-->
+					<div class="bloco-05">
+						<div class="bloco-top"></div>
+						<div class="bloco-texto">Uncharted 4<br>(A Thief's End)</div>
+					</div><!--(BLOCO-05)-->
+					<div class="bloco-06">
+						<div class="bloco-top"></div>
+						<div class="bloco-texto">Death<br>Stranding</div>
+					</div><!--(BLOCO-06)-->
+
+					<div class="clear-both"></div><!--(CLEAR-BOTH)-->
+				</div><!--(BLOCO-PRINCIPAL)-->
+
+				<div class="clear-both"></div><!--(CLEAR-BOTH)-->
+			</div><!--(CONTEUDO)-->
+
+			<div class="sessao-apresentacao">
+				<div class="frase-02">
+					<p class="min-texto-02">Disponível em breve em nossa loja virtual.</p>
+					<p class="min-texto-03">Junte-se ao grande Kratos em suas aventuras dentro de um novo mundo com deuses nórdicos, cuidado, cada passo será um desafio.</p>
+
+					<input type="submit" name="acao" value="Se torne um Viking">
+				</div><!--(FRASE-02)-->
+
+				<div class="clear-both"></div><!--(CLEAR-BOTH)-->
+			</div><!--(APRESENTACAO)-->
+
+			<div class="sessao-roda">
+				<div class="bloco-inform">
+					<div class="bloco-roda">
+						<div class="frase-roda">Desenvolvido com ❤️ por ∬Lord RyaNN∬</div>
+						<div class="name">(R.Santos)</div>
+
+						<div class="clear-both"></div><!--(CLEAR-BOTH)-->
+					</div><!--(BLOCO-RODA)-->
+				</div><!--(BLOCO-INFORMACAO)-->
+
+				<div class="bloco-redes-02">
+					<div class="instagram-02">
+						<div class="img-insta-02"></div><!--(I.M.G-INSTA-02)-->
+						<div class="texto-roda-02">
+							<h3 class="redes-02">
+								Instagram
+							</h3><!--(REDES-02)-->
+
+							<div class="clear-both"></div><!--(CLEAR-BOTH)-->
+						</div><!--(TEXTO-RODA-02)-->
+
+						<div class="clear-both"></div><!--(CLEAR-BOTH)-->
+					</div><!--(INSTAGRAM-02)-->
+
+					<div class="whatsapp-02">
+						<div class="img-whats-02"></div><!--(I.M.G-WHATS-02)-->
+						<div class="texto-roda-02">
+							<h3 class="redes-02">
+								Whatsapp
+							</h3><!--(REDES-02)-->
+
+							<div class="clear-both"></div><!--(CLEAR-BOTH)-->
+						</div><!--(TEXTO-RODA-02)-->
+
+						<div class="clear-both"></div><!--(CLEAR-BOTH)-->
+					</div><!--(WHATSAPP-02)-->
+
+					<div class="youtube">
+						<div class="img-youtube"></div><!--(I.M.G-YOUTUBE)-->
+						<div class="texto-roda-02">
+							<h3 class="redes-02">
+								YouTube
+							</h3><!--(REDES-02)-->
+
+							<div class="clear-both"></div><!--(CLEAR-BOTH)-->
+						</div><!--(TEXTO-RODA-02)-->
+
+						<div class="clear-both"></div><!--(CLEAR-BOTH)-->
+					</div><!--(YOUTUBE)-->
+
+					<div class="bloco-roda-02">
+						<div class="frase-roda-02">Desenvolvido com ❤️ por ∬Lord RyaNN∬</div>
+						<div class="name-02">(R.Santos)</div>
+					</div><!--(BLOCO-RODA-02)-->
+
+					<div class="clear-both"></div><!--(CLEAR-BOTH)-->
+				</div><!--(BLOCO-REDES-02)-->
+			</div><!--(RODA)-->
+			
+			<div class="clear-both"></div><!--(CLEAR-BOTH)-->
+		</div><!--(PRINCIPAL)-->
+	</body>
+</html>
