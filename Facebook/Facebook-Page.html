@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Página de login do Facebook">
+		<meta name="keywords" content="login,facebook">
+		<meta name="author" content="R.Santos">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+		<title>Login Facebook</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: 'Ubuntu', sans-serif;
+			}
+
+			html,body{
+				height: 100%;
+			}
+
+			/*transition: 1s width, 2s height;
+			  transition-delay: 2s;
+			  -webkit-transition: 2s;
+			  -webkit-transition: 1s width, 2s height;*/
+
+			.top-face{
+				width: 100%;
+				height: 50px;
+				padding: 0 5% 0 12%;
+				margin: 0 auto;
+			}
+
+			.clear{clear: both;}
+
+			header{
+				background-color: #1b1e6e;
+				padding: 8px 0;
+			}
+
+			input{
+				border-radius: 3px;
+				border: none;
+			}
+
+			.logo{
+				float: left;
+				color: white;
+				cursor: pointer;
+			}
+
+			.logo h2{
+				font-size: 45px;
+				font-weight: normal;
+			}
+
+			.acesso{
+				float: right;
+			}
+
+			.form-login{
+				display: inline-block;
+				margin-right: 1px;
+				color: white;
+			}
+
+			.form-login input[type=email], .form-login input[type=password]{
+				margin-top: 4px;
+				width: 250px;
+				height: 20px;
+			}
+
+			.form-login input[type=submit]{
+				cursor: pointer;
+				width: 70px;
+				height: 27px;
+				border: 0;
+				color: white;
+				background-color: #1b1e6e;
+			}
+
+			.form-login input[velue=ENVIAR]{
+				text-align: center;
+			}
+
+			input[type=submit]{
+				transition: 0.1s;
+				opacity: 0.8;
+			}
+
+			input[type=submit]:hover{
+				/*animation-duration: 2s;*/
+				box-shadow: 0px 2px 3px 0px black;
+			}
+
+			.conteudo{
+				height: calc(100% - 66px);
+				background: linear-gradient(#1b1e6e, #94b6ff);
+				padding: 40px 0;
+			}
+
+			.conexao{
+				float: left;
+				width: 50%;
+				transition:1s;
+			}
+
+			.conexao:hover{
+				width: 53%;
+			}
+
+			/*
+			.conexao{
+				float: left;
+				width: 50%;
+				animation-duration: 6s;
+				animation-delay: 1s;
+				animation-name: espada;
+				animation-iteration-count: infinite;
+			}
+
+			@keyframes espada{
+				0%{
+					width: 50%;
+				}
+
+				50%{
+					width: 55%;
+				}
+
+				100%{
+					width: 50%;
+				}
+			}
+			*/
+
+			.conexao img{
+				max-width: 100%;
+			}
+
+			.nova-conta{
+				margin-top: 5%;
+				float: right;
+				width: 45%;
+			}
+
+			.nova-conta h2{
+				margin-left: 2%;
+				color: rgb(30,30,30);
+				font-size: 25px;
+			}
+
+			.nova-conta h3{
+				margin-left: 2%;
+				color: rgb(26, 26, 26);
+				font-size: 17px;
+			}
+
+			.novos-dados{
+				width: 100%;
+				margin-top: 10px;
+			}
+
+			.novos-dados input[type=text]{
+				width: calc(50% - 2.5px);
+				float: left;
+			}
+
+			.novos-dados input{
+				height: 40px;
+				font-size: 17px;
+				margin-top: 5px;
+				padding-left: 10px;
+			}
+
+			.dados input[placeholder=Sobrenome]{
+				margin-left: 5px;
+			}
+
+			.dados{
+				width: 65%;
+			}
+
+			.dados-2 input{
+				width: 65%;
+			}
+
+			.dados-2{
+				display: inline-block;
+				width: 100%;
+			}
+
+			.dados-2 input[type=submit]{
+				text-align: center;
+				font-size: 40px;
+				height: 60px;
+				background: linear-gradient(#1b1e6e, #94b6ff);
+				color: white;
+				cursor: pointer;
+				border: 0;
+			}
+
+			.dados-2 h2{
+				margin: 10px 0 10px 2%;
+			}
+
+			.dados-2 select{
+				text-align: center;
+				width: 21.1%;
+				border-radius: 3px;
+			}
+
+			.dados-3{
+				width: 65%;
+				height: 30px;
+			}
+
+			.radio input[type=radio]{
+				border: none;
+				margin-left: 24%;
+				margin-top: 0;
+				width: 15px;
+				float: left;
+			}
+
+			.radio{
+				width: 49.1%;
+				display: inline-block;
+			}
+
+			.radio h2{
+				margin-top: 8px;
+				display: inline-block;
+				font-size: 20px;
+			}
+
+			@media screen and (max-width: 1070px){
+				.conexao{
+					display: none;
+				}
+
+				.conteudo{
+					width: 100%;
+				}
+
+				.nova-conta{
+					width: 75%;
+				}
+
+				.top-face{
+					display: inline-block;
+					padding: 0;
+				}
+
+				.logo{
+					width: 100%;
+					float: none;
+					text-align: center;
+				}
+
+				.acesso{
+					text-align: center;
+					width: 100%;
+					float: none;
+					display: block;
+				}
+
+				.form-login{
+					margin: 0; 
+					display: block;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<div class="top-face">
+				<div class="logo">
+					<h2>Facebook</h2>
+				</div><!--(LOGO)-->
+
+				<form method="post" class="acesso">
+					<div class="form-login">
+						<p>Email ou Telefone</p>
+						<input type="email">
+					</div><!--(FORM-LOGIN)-->
+
+					<div class="form-login">
+						<p>Senha</p>
+						<input type="password">
+					</div><!--(FORM-LOGIN)-->
+
+					<div class="form-login">
+						<input type="submit" name="acao" value="ENVIAR">
+					</div><!--(FORM-LOGIN)-->
+				</form><!--(ACESSO)-->
+			</div><!--(TOP-FACE)-->
+		</header>
+
+		<section class="conteudo">
+			<div class="cont-center">
+				<div class="conexao">
+					<img src="facebook.png">
+				</div><!--(CONEXAO)-->
+
+				<div class="nova-conta">
+					<h2>Abra sua conta</h2>
+					<h3>Pode ser que sempre seja gratuito.</h3>
+
+					<form class="novos-dados">
+						<div class="dados">
+							<input placeholder="Nome" type="text">
+						</div><!--(DADOS)-->
+
+						<div class="dados">
+							<input placeholder="Sobrenome" type="text">
+						</div><!--(DADOS)-->
+
+						<div class="dados-2">
+							<input placeholder="Email" type="email">
+						</div><!--(DADOS-2)-->
+
+						<div class="dados-2">
+							<input placeholder="Senha" type="password">
+						</div><!--(DADOS-2)-->
+
+						<div class="dados-2">
+							<h2>Data de Nascimento</h2>
+							<select name="dia" class="dia">
+								<option value="1">01</option>
+							</select>
+
+							<select name="mes" class="mes">
+								<option value="0">Janeiro</option>
+								<option value="0">Fevereiro</option>
+								<option value="0">Março</option>
+								<option value="0">Abril</option>
+								<option value="0">Maio</option>
+								<option value="0">Junho</option>
+								<option value="0">Julho</option>
+								<option value="0">Agosto</option>
+								<option value="0">Setembro</option>
+								<option value="0">Outubro</option>
+								<option value="0">Novembro</option>
+								<option value="0">Dezembro</option>
+							</select>
+
+							<select name="ano" class="ano">
+								<option value="0">2021</option>
+							</select>
+							<div class="clear"></div>
+						</div><!--(DADOS-2)-->
+
+						<div class="dados-3">
+							<div class="radio">
+								<input type="radio" name="sexo" value="masculino">
+								<h2>Masculino</h2>
+							</div><!--(RADIO)-->
+
+							<div class="radio">
+								<input type="radio" name="sexo" value="feminino">
+								<h2>Feminino</h2>
+							</div><!--(RADIO)-->
+							<div class="clear"></div>
+						</div><!--(DADOS-3)-->
+
+						<div class="dados-2">
+							<input type="submit" name="acao" value="Cadastre-se">
+						</div><!--(DADOS-2)-->
+						<div class="clear"></div>
+					</form><!--(NOVOS-DADOS)-->
+				</div><!--(NOVA-CONTA)-->
+				<div class="clear"></div>
+			</div><!--(CONT-CENTER)-->
+		</section><!--(CONTEUDO)-->
+	</body>
+</html>

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Conteúdo do meu Site">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<meta name="keywords" content="palavras,chaves">
+		<meta name="author" content="R.Santos">
+
+		<title>Página de Vendas</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			html,body{
+				height: 100%;
+				background-color: black;
+			}
+
+			.clear{
+				clear: both;
+			}
+
+			header{
+				border: none;
+				border-radius: 4px;
+				display: inline-block;
+				width: 100%;
+				height: 60px;
+				background-size: 100%;
+				background-repeat: no-repeat;
+				background-color: black;
+				background-image: linear-gradient(90deg, black 10%, #000263);
+				animation-name: color;
+				animation-duration: 5s;
+				animation-iteration-count: infinite;
+			}
+
+			/*
+
+			.log01{
+				opacity: 0.8;
+				display: inline-block;
+				margin-left: 150px;
+				width: 70px;
+				height: 60px;
+				border: none;
+				border-radius: 10%;
+				background-position: center;
+				background-size: 65px;
+				background-repeat: no-repeat;
+				background-image: url(./Imagens/honda-min.png), linear-gradient(90deg, #01020a 50%, #010224);
+			}
+			*/
+
+			.log02{
+				transition: 1.5s;
+				border: none;
+				border-radius: 4px;
+				position: relative;
+				left: calc(100% - 445px);
+				/*margin-left: 860px;*/
+				/*margin-right: 100px;*/
+				display: inline-block;
+				width: 350px;
+				height: 60px;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: 100%;
+				background-image: url(./Imagens/honda02-min.jpg);
+			}
+
+			.BG{
+				border: none;
+				border-radius: 7px;
+				display: inline-block;
+				margin-top: -4px;
+				width: 100%;
+				height: 550px;
+				background-size: 100%;
+				background-position: top;
+				background-repeat: no-repeat;
+				background-image: url(./Imagens/paoel-honda-min.jpg);
+				transition: 0.7s;
+			}
+
+			.BG:hover{
+				background-size: 105%;
+			}
+
+			.formulario{
+				transition: 1.5s;
+				border: none;
+				border-radius: 7px;
+				position: relative;
+				left: calc(70% - 75.5px);
+				width: 400px;
+				height: 80%;
+				margin: 4% 75.5px 0 0;
+				opacity: 0.9;
+				background-image: linear-gradient(#0e0d52, black);
+			}
+
+			.titulo{
+				text-align: center;
+				width: 100%;
+				background-color: rgba(97, 0, 0, 0.0);
+			}
+
+			.login-conteudo{
+				width: 100%;
+				height: 85.3%;
+				text-align: center;
+			}
+
+			h2{
+				color: silver;
+				padding: 13px;
+				font-size: 23px;
+			}
+
+			.dados{
+				width: calc(40% - 2px);
+				margin-top: 70px;
+				margin-bottom: 3px;
+				display: inline-block;
+			}
+
+			.texto{
+				margin: 3px;
+				width: 80%;
+				display: inline-block;
+			}
+
+			.enviar{
+				margin: 3px;
+				width: 100%;
+				display: inline-block;
+			}
+
+			.conteudo input{
+				display: inline-block;
+				border: none;
+				border-radius: 7px;
+				font-size: 15px;
+				padding: 5px;
+				width: 100%;
+				height: 40px;
+			}
+
+			input[type=submit]{
+				margin-top: 70px;
+				font-size: 40px;
+				cursor: pointer;
+				width: 80%;
+				height: 60px;
+				transition: 0.3s;
+			}
+
+			input[type=submit]:hover{
+				width: 87%;
+				box-shadow: 0 0 10px 0px skyblue;
+			}
+
+			.ponto{
+				position: relative;
+				top: -30px;
+				left: calc(50% - 30px);
+				width: 60px;
+				height: 60px;
+				border: none;
+				opacity: 0.8;
+				background-color: black;
+				background-repeat: no-repeat;
+				border-radius: 20%;
+				background-image: url(./Imagens/ponto-honda-min.png);
+				background-size: 100%;
+				background-position: center;
+				transition: 0.5s;
+			}
+
+			.ponto:hover{
+				border-radius: 50%;
+			}
+
+			.cont-principal{
+				margin-top: -60px;
+				width: 100%;
+				height: 1000px;
+				background-color: black;
+			}
+
+			.cont{
+				transition: 2s;
+				display: flex;
+				flex-direction: row;
+				border: none;
+				border-radius: 7px;
+				text-align: center;
+				width: 100%;
+				height: 250px;
+				background-image: linear-gradient(90deg, black, #520505);
+			}
+
+			.inverso{
+				transition: 2s;
+				display: flex;
+				flex-direction: row-reverse;
+				border: none;
+				border-radius: 7px;
+				text-align: center;
+				width: 100%;
+				height: 250px;
+				background-image: linear-gradient(90deg, black, #520505);
+			}
+
+			.img{
+				border: none;
+				border-radius: 7px;
+				margin: 0.5%;
+				display: inline-block;
+				width: 56.5%;
+				height: 94%;
+				background-color: black;
+				transition: 0.7s;
+			}
+
+			.textos{
+				border: none;
+				border-radius: 7px;
+				margin: 0.5%;
+				display: inline-block;
+				width: 36.5%;
+				height: 94%;
+				background-color: #001942;
+				transition: 0.7s;
+			}
+
+			.img:hover{
+				margin: 0;
+				width: calc(61.6% + 2px);
+				height: 100%;
+			}
+
+			.textos:hover{
+				margin: 0;
+				width: calc(41.6% + 2px);
+				height: 100%;
+			}
+
+			p{
+				margin-top: 30px;
+				float: left;
+				width: 100%;
+				font-size: 20px;
+				padding: 40px;
+				color: silver;
+			}
+
+			/* *****(Imagens dos icones em preto)***** */
+
+			.img-01{
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-image: url(./Imagens/honda-01-min.jpg);
+			}
+
+			.img-02{
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-image: url(./Imagens/honda-02-min.jpg);
+			}
+
+			.img-03{
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-image: url(./Imagens/honda-03-min.jpg);
+			}
+
+			.img-04{
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-image: url(./Imagens/honda-04-min.jpg);
+			}
+
+			.roda{
+				text-align: center;
+				border: none;
+				border-radius: 7px;
+				width: 100%;
+				height: 60px;
+				background-color: black;
+				background-image: linear-gradient(90deg, black, #520505);
+			}
+
+			.instagram{
+				transition: 0.7s;
+				border: none;
+				border-radius: 10px;
+				margin: 10px 5%;
+				width: 170px;
+				height: 40px;
+				background-color: black;
+				background-image: linear-gradient(90deg, black 20%, #520505, black);
+				float: left;
+			}
+
+			.whatsapp{
+				transition: 0.7s;
+				border: none;
+				border-radius: 10px;
+				margin: 10px auto;
+				width: 170px;
+				height: 40px;
+				background-color: black;
+				background-image: linear-gradient(90deg, black 20%, #520505, black);
+				float: left;
+			}
+
+			.img-insta{
+				float: left;
+				border: none;
+				border-radius: 10px;
+				width: 24%;
+				height: 40px;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 100%;
+				background-image: url(./Imagens/instagram.png);
+			}
+
+			.img-whats{
+				float: left;
+				border: none;
+				border-radius: 10px;
+				width: 24%;
+				height: 40px;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 100%;
+				background-image: url(./Imagens/whatsapp.png);
+			}
+
+			.roda h3{
+				float: left;
+				font-size: 20px;
+				display: inline-block;
+				cursor: pointer;
+				margin: 9px;
+				color: silver;
+			}
+
+			.instagram:hover{
+				box-shadow: 0 0 10px 0px skyblue;
+			}
+
+			.whatsapp:hover{
+				box-shadow: 0 0 10px 0px skyblue;
+			}
+
+			/* *****(Animação da página)***** */
+
+			@keyframes color{
+				0%{
+					background-size: 100%;
+				}
+
+				50%{
+					background-size: 150%;
+				}
+
+				100%{
+					background-size: 100%;
+				}
+			}
+
+			@media screen and (max-width: 1320px){
+				header{
+					background-image: linear-gradient(90deg, black, #000263, black);
+					background-position: center;
+				}
+
+				.formulario{
+					left: calc(50% - 200px);
+				}
+
+				/*.log01{
+					display: none;
+				}*/
+
+				.log02{
+					/*float: none;
+					display: inline-block;*/
+					position: relative;
+					margin: 0;
+					left: calc(50% - 175px);
+				}
+			}
+
+			@media screen and (max-width: 1100px){
+				.BG{
+					background-size: 1100px;
+				}
+
+				.BG:hover{
+					background-size: 1100px;
+				}
+			}
+
+			@media screen and (max-width: 950px){
+				.cont{
+					display: inline-block;
+					height: 500px;
+				}
+
+				.inverso{
+					display: inline-block;
+					height: 500px;
+				}
+
+				.ponto:hover{
+					border-radius: 20%;
+				}
+
+				input[type=submit]:hover{
+					width: 82%;
+				}
+
+				.img{
+					border-radius: 10px;
+					border-bottom-left-radius: 0;
+					border-bottom-right-radius: 0;
+					margin: 0;
+					width: 95%;
+					height: 248px;
+					transition: 0.3s;
+				}
+
+				.textos{
+					border-top-left-radius: 0;
+					border-top-right-radius: 0;
+					margin: -4px 0 0 0;
+					width: 95%;
+					height: 220px;
+					transition: 0.3s;
+				}
+
+				.img:hover{
+					width: 95%;
+					height: 248px;
+				}
+
+				.textos:hover{
+					margin: -4px 0 0 0;
+					width: 95%;
+					height: 220px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="log01"></div><!--(LOG-01)-->
+			<div class="log02"></div><!--(LOG-02)-->
+			<div class="clear">
+			</div><!--(CLEAR-BOTH)-->
+		</header><!--(HEADER)-->
+
+		<div class="BG">
+			<div class="formulario">
+				<div class="titulo">
+					<h2>
+						Preencha todos os dados abaixo para nos contatar.
+					</h2>
+				</div><!--(TITULO)-->
+
+				<div class="login-conteudo">
+					<form class="conteudo">
+						<div class="dados">
+							<input placeholder="Email" type="email">
+						</div><!--(DADOS)-->
+
+						<div class="dados">
+							<input placeholder="Nome completo" type="password">
+						</div><!--(DADOS)-->
+
+						<div class="texto">
+							<input placeholder="Digite seu número de telefone para contato." type="text">
+						</div><!--(TEXTO)-->
+
+						<div class="texto">
+							<input placeholder="Insira um texto já pré produzido." type="text">
+						</div><!--(TEXTO)-->
+
+						<div class="enviar">
+							<input type="submit" name="acao" value="ENVIAR">
+						</div><!--(ENVIAR)-->
+
+						<div class="clear">
+						</div><!--(CLEAR-BOTH)-->
+					</form><!--(CONTEUDO)-->
+				</div><!--(LOGIN-CONTEUDO)-->
+			</div><!--(FORMULARIO)-->
+		</div><!--(B.G)-->
+
+		<div class="ponto">
+		</div><!--(PONTO)-->
+
+		<div class="cont-principal">
+			<div class="cont">
+				<div class="img img-01"></div><!--(I.M.G)-->
+				<div class="textos">
+					<p>As verdadeiras revoluções nascem de um sonho. Nossos carros também. Conheça o poder da inovação.</p>
+				</div><!--(TEXTOS)-->
+			</div><!--(CONT)-->
+
+			<div class="inverso" style="flex-direction: row-reverse;">
+				<div class="img img-02"></div><!--(I.M.G)-->
+				<div class="textos">
+					<p>As verdadeiras revoluções nascem de um sonho. Nossos veículos também. Conheça o poder da inovação.</p>
+				</div><!--(TEXTOS)-->
+			</div><!--(CONT-INVERSO)-->
+
+			<div class="cont">
+				<div class="img img-03"></div><!--(I.M.G)-->
+				<div class="textos">
+					<p>As verdadeiras revoluções nascem de um sonho. Nossos carros também. Conheça o poder da inovação.</p>
+				</div><!--(TEXTOS)-->
+			</div><!--(CONT)-->
+
+			<div class="inverso">
+				<div class="img img-04"></div><!--(I.M.G)-->
+				<div class="textos">
+					<p>As verdadeiras revoluções nascem de um sonho. Nossos carros também. Conheça o poder da inovação.</p>
+				</div><!--(TEXTOS)-->
+			</div><!--(CONT-INVERSO)-->
+
+			<div class="roda">
+				<div class="instagram">
+					<div class="img-insta"></div><!--(I.M.G-INSTA)-->
+					<div class="texto-roda">
+					<h3 class="redes">
+						Instagram
+					</h3><!--(REDES)-->
+					</div><!--(TEXTO-RODA)-->
+				</div><!--(INSTAGRAM)-->
+
+				<div class="whatsapp">
+					<div class="img-whats"></div><!--(I.M.G-WHATS)-->
+					<h3 class="redes">
+						WhatsApp
+					</h3><!--(REDES)-->
+					<div class="clear">
+					</div><!--(CLEAR-BOTH)-->
+				</div><!--(WHATS.APP)-->
+			</div><!--(RODA)-->
+
+			<div class="clear">
+			</div><!--(CLEAR-BOTH)-->
+		</div><!--(CONT-PRINCIPAL)-->
+	</body>
+</html>
